@@ -91,3 +91,108 @@ console.log("Input String : ", inputString)  // Input String :  hELlO
 console.log("Output String : ", resultString)  // Output String :  HelLo
 
 
+
+// Task 4 :-
+
+// Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array.
+// Sample array: [NaN, 0, 15, false, -22, '',undefined, 47, null]
+// Expected result: [15, -22, 47]
+
+const sampleArray = [NaN, 0, 15, false, -22, '', undefined, 47, null]
+const resultArray6 = sampleArray.filter(Boolean)
+
+console.log("\n")
+console.log("**********  Task4 Output  **********")
+console.log(resultArray6)  // [ 15, -22, 47 ]
+
+
+
+// Task 5 :-
+
+// Create an array of scores from an existing array, using javascript methods
+// const users = [ { name: 'Victor', score: 20 },
+// { name: 'Mario', score: 10 },
+// { name: 'Tatiana', score: 30 } ]
+
+const users = [{ name: 'Victor', score: 20 }, { name: 'Mario', score: 10 }, { name: 'Tatiana', score: 30 }]
+const resultArray7 = []
+
+for (let i = 0; i < users.length; i++) {
+    resultArray7.push(users[i].score)
+}
+
+console.log("\n")
+console.log("**********  Task5 Output  **********")
+console.log(resultArray7)  // [ 20, 10, 30 ]
+
+
+
+// // Task 6 :-
+
+// A program to list down the properties of the object.
+// const student = {
+// name: 'xxx',
+// id: 123,
+// department: 'computer',
+// semester: 4
+// }
+// output should print name, id, department, semester.
+
+const student = {
+    name: 'dhruv',
+    id: 123,
+    department: 'computer',
+    semester: 4
+}
+
+console.log("\n")
+console.log("**********  Task6 Output  **********")
+console.log("Name :", student.name)  // Name : dhruv
+console.log("Id :", student.id)  // Id : 123
+console.log("Department :", student.department)  // Department : computer
+console.log("Semester :", student.semester)  // Semester : 4
+
+
+
+// Task 7 :-
+
+// Intersection array of keys between two objects
+// Sample Input : var a = { x: 0, y: 1, z: 2, a: 10, b: 20, e: 30 },
+// b = { x: 0, y: 1, z: 2, a: 10, c: 20, d: 30 };
+// Expected output : ['x', 'y', 'z', 'a']
+
+var a = { x: 0, y: 1, z: 2, a: 10, b: 20, e: 30 }
+var b = { x: 0, y: 1, z: 2, a: 10, c: 20, d: 30 }
+
+var Intersection = Object.keys(a).filter((key) => Object.keys(b).includes(key))
+
+console.log("\n")
+console.log("**********  Task7 Output  **********")
+console.log(Intersection)  // [ 'x', 'y', 'z', 'a' ]
+
+
+
+// Task 8 :-
+
+// write the script to remove the department key from the student object.
+// const student = {
+// name: 'xxx',
+// id: 123,
+// department: 'computer',
+// semester: 4,
+// languages: ["JavaScript", "Python", "Ruby"]
+// }
+
+const student1 = {
+    name: 'abc',
+    id: 123,
+    department: 'computer',
+    semester: 4,
+    languages: ['JavaScript', 'Python', 'Ruby']
+}
+
+delete student1.department
+
+console.log("\n")
+console.log("**********  Task8 Output  **********")
+console.log(student1)
